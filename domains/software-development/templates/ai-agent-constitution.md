@@ -1,18 +1,18 @@
-# Constitution: [Your AI Agent/Bot Name]
+# Constitution: [AGENT_NAME]
 
 **Type:** AI Agent / Bot / API Service
-**Created:** [Date]
-**Last Updated:** [Date]
+**Created:** [CONSTITUTION_DATE — YYYY-MM-DD]
+**Last Updated:** [CONSTITUTION_DATE — YYYY-MM-DD]
 
 ---
 
 ## Project Overview
 
-**Name:** [Your Agent/Bot Name]
+**Name:** [AGENT_NAME]
 
-**Purpose:** [What does this agent do? What problem does it solve?]
+**Purpose:** [AGENT_PURPOSE — What does this agent do? What problem does it solve?]
 
-**Integration Points:** [Where does this agent run? Slack, Discord, API, Webhook, etc.]
+**Integration Points:** [INTEGRATION_PLATFORMS — e.g., Slack (slash commands + mentions), Webhook endpoint]
 
 **Example:**
 ```
@@ -41,9 +41,9 @@ Triggers: /customer [email], @supportbot [question]
 
 ### Runtime & Framework
 ```
-Runtime: [Node.js / Python / Go / etc.]
-Framework: [Express / FastAPI / Hono / etc.]
-Language: [TypeScript / Python / etc.]
+Runtime: [RUNTIME_CHOICE — e.g., Node.js 20 (LTS)]
+Framework: [FRAMEWORK_CHOICE — e.g., Hono (edge-native, fast)]
+Language: [LANGUAGE_CHOICE — e.g., TypeScript (strict mode)]
 ```
 
 **Example:**
@@ -56,10 +56,10 @@ Deployment: Cloudflare Workers (edge, low latency)
 
 ### AI/LLM Integration
 ```
-LLM Provider: [OpenAI / Anthropic / Together / etc.]
-Model: [GPT-4 / Claude / etc.]
-Fallback: [What happens if LLM fails?]
-Context Management: [How do you handle conversation context?]
+LLM Provider: [LLM_PROVIDER — e.g., Anthropic]
+Model: [LLM_MODEL — e.g., Claude Sonnet 4.5]
+Fallback: [LLM_FALLBACK_STRATEGY — e.g., Cached responses or rule-based replies if LLM unavailable]
+Context Management: [CONTEXT_MANAGEMENT — e.g., Store last 10 messages in Redis per conversation]
 ```
 
 **Example:**
@@ -96,9 +96,9 @@ File Storage: Cloudflare R2 for uploaded files
 
 ### Integrations
 ```
-Platform: [Slack / Discord / Telegram / WhatsApp / etc.]
-External APIs: [List APIs you'll call]
-Webhooks: [List webhooks you'll receive]
+Platform: [INTEGRATION_PLATFORM — e.g., Slack (Bolt SDK)]
+External APIs: [EXTERNAL_APIS — e.g., Stripe API (customer lookup), Zendesk API (ticket creation)]
+Webhooks: [INBOUND_WEBHOOKS — e.g., Stripe webhooks (subscription events)]
 ```
 
 **Example:**
@@ -599,6 +599,20 @@ Compliance: GDPR-compliant (users can request their audit logs)
 
 ---
 
+## Code Style
+
+### Naming — Verbose Over Concise
+```
+Prioritise clarity over brevity in all identifiers:
+- ✅ getUserAuthenticationToken() not getToken()
+- ✅ isEmailValidationSuccessful not isValid
+- ✅ MAX_RETRY_ATTEMPTS not MAX_RETRIES
+- ✅ handleSlackCommandReceived not handleCommand
+- Rule: a new developer should understand the purpose of any variable or function without reading its implementation
+```
+
+---
+
 ## Scalability
 
 ### Asynchronous Processing
@@ -862,12 +876,12 @@ Rollback:
 
 ### LLM Costs
 ```
-Budget: [$X / month]
-Model: [Which model, cost per token]
+Budget: [LLM_MONTHLY_BUDGET — e.g., $200/month (Claude API)]
+Model: [LLM_MODEL_AND_COST — e.g., Claude Sonnet 4.5 — $3/1M input, $15/1M output tokens]
 Optimization:
-- Prompt caching
-- Smaller models for simple tasks
-- Cache responses
+- [LLM_OPTIMISATION_1 — e.g., Prompt caching for system prompts (90% discount on cached tokens)]
+- [LLM_OPTIMISATION_2 — e.g., Use Claude Haiku for simple lookups]
+- [LLM_OPTIMISATION_3 — e.g., Cache common query responses (TTL: 1 hour)]
 ```
 
 **Example:**

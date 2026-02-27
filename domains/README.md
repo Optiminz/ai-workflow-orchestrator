@@ -20,7 +20,6 @@ Select the domain that matches your work. Each domain includes specialized perso
 - **5 Personas:** Product Owner, Solutions Architect, Developer, QA Engineer, Technical Writer
 - **16 Prompts:** Organized across 5 phases (setup, planning, implementation, review, documentation)
 - **3 Constitution Templates:** Internal tool, Client app, AI agent
-- **3 Complete Examples:** Expense tracker, SaaS dashboard, Slack bot
 - **3 Tool Setup Guides:** Claude Code, Cursor, Replit
 
 ### Workflow Type
@@ -57,7 +56,6 @@ Phase 4: Technical Writer (Documentation)
 - **5 Personas:** Content Strategist, Writer, SEO Specialist, Fact Checker, Editor
 - **12 Prompts:** Organized across 4 phases (planning, creation, refinement, publishing)
 - **3 Constitution Templates:** Blog, Marketing, Technical docs
-- **2 Complete Examples:** SaaS blog post, Product launch post
 
 ### Workflow Type
 **Linear:** Plan → Draft → Optimize → Publish

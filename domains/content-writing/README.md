@@ -9,7 +9,6 @@ Create high-quality content using AI with brand voice consistency, SEO optimizat
 - **5 Personas:** Content Strategist, Writer, SEO Specialist, Fact Checker, Editor
 - **12 Prompts:** Organized across 4 phases (planning, creation, refinement, publishing)
 - **3 Constitution Templates:** Blog, Marketing, Technical docs
-- **2 Complete Examples:** SaaS blog post, Product launch post
 - **1 Workflow Overview:** Linear workflow for content production
 
 ---
@@ -131,37 +130,6 @@ Content writing uses a **linear workflow** with optional iteration:
 Unlike software (iterative), content moves linearly with targeted revisions as needed.
 
 **[View Full Workflow Details →](./workflow/workflow-overview.md)**
-
----
-
-## Examples
-
-### 1. SaaS Blog Post: "How to Choose Project Management Software"
-**Type:** SEO-focused B2B blog content
-**Constitution:** [blog-constitution.md](./examples/saas-blog-post/CONSTITUTION.md)
-
-Complete workflow showing:
-- Content brief with keyword research
-- Multiple draft iterations (v1 → v2 → v3)
-- SEO optimization report
-- Fact-checking process
-- Final polished article
-
-**[View Example →](./examples/saas-blog-post/)**
-
----
-
-### 2. Product Launch Post: "Introducing [New Feature]"
-**Type:** Marketing-focused product announcement
-**Constitution:** [marketing-constitution.md](./examples/product-launch-post/CONSTITUTION.md)
-
-Shows conversion-focused content with:
-- Tight word count constraints
-- Strong CTAs
-- Brand voice consistency
-- Launch-day distribution plan
-
-**[View Example →](./examples/product-launch-post/)**
 
 ---
 

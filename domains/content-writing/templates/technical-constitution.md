@@ -1,16 +1,16 @@
-# Constitution: [Your Technical Documentation]
+# Constitution: [PRODUCT_NAME] Technical Documentation
 
 **Type:** Technical Documentation / Tutorials / API Guides
-**Created:** [Date]
-**Last Updated:** [Date]
+**Created:** [CONSTITUTION_DATE — YYYY-MM-DD]
+**Last Updated:** [CONSTITUTION_DATE — YYYY-MM-DD]
 
 ---
 
 ## Project Overview
 
-**Documentation Type:** [e.g., "API documentation", "Product docs", "Technical tutorials"]
+**Documentation Type:** [DOCUMENTATION_TYPE — e.g., API documentation, product docs, technical tutorials]
 
-**Purpose:** [One paragraph describing what your documentation covers and who uses it]
+**Purpose:** [DOCUMENTATION_PURPOSE — One paragraph describing what your documentation covers and who uses it]
 
 **Example:**
 ```
@@ -64,11 +64,11 @@ Troubleshooting: Problem-solving, diagnostic, solution-oriented
 
 **Primary Audience:**
 ```
-Role: [e.g., "Backend developers"]
-Experience level: [e.g., "2-5 years, comfortable with REST APIs"]
-Tech stack: [e.g., "Node.js, Python, or Ruby"]
-Goal: [e.g., "Integrate our API into their application"]
-Common blockers: [e.g., "Authentication, webhook setup, error handling"]
+Role: [AUDIENCE_ROLE — e.g., Backend developers]
+Experience level: [AUDIENCE_EXPERIENCE — e.g., 2-5 years, comfortable with REST APIs]
+Tech stack: [AUDIENCE_TECH_STACK — e.g., Node.js, Python, or Ruby]
+Goal: [AUDIENCE_GOAL — e.g., Integrate our API into their application]
+Common blockers: [AUDIENCE_COMMON_BLOCKERS — e.g., Authentication, webhook setup, error handling]
 ```
 
 **Secondary Audience (if applicable):**
@@ -234,7 +234,7 @@ Use `/v2/users/{id}` instead. [Migration Guide](link)
 ## SEO for Technical Docs
 
 ### Search Optimization
-- **Title format:** "[Task] in [Technology]" (e.g., "Authentication in Python")
+- **Title format:** [TITLE_FORMAT — e.g., "[Task] in [Technology]", e.g., "Authentication in Python"]
 - **Keywords:** Technical terms developers search (function names, error codes, concepts)
 - **Meta description:** Include programming language and key task
 - **URL structure:** /docs/[section]/[topic] (e.g., /docs/api/authentication)
