@@ -1,18 +1,18 @@
-# Constitution: [Your Client App Name]
+# Constitution: [PROJECT_NAME]
 
 **Type:** Client Application
-**Created:** [Date]
-**Last Updated:** [Date]
+**Created:** [CONSTITUTION_DATE — YYYY-MM-DD]
+**Last Updated:** [CONSTITUTION_DATE — YYYY-MM-DD]
 
 ---
 
 ## Project Overview
 
-**Name:** [Your Application Name]
+**Name:** [PROJECT_NAME]
 
-**Purpose:** [One paragraph describing what this application does and the problem it solves]
+**Purpose:** [PROJECT_PURPOSE — One paragraph describing what this application does and the problem it solves]
 
-**Target Market:** [Who are your customers? What industry?]
+**Target Market:** [TARGET_MARKET — e.g., Small to medium e-commerce businesses (10-500 employees)]
 
 **Example:**
 ```
@@ -42,9 +42,9 @@ looking for affordable, easy-to-use analytics.
 ### Framework
 **Specify your primary framework and version:**
 ```
-Framework: [Next.js 14 / React 18 / Vue 3 / Angular / etc.]
-Version: [Exact version]
-Why: [Reason for choosing this]
+Framework: [FRONTEND_FRAMEWORK — e.g., Next.js 14 with App Router]
+Version: [FRAMEWORK_VERSION — e.g., 14.2.x]
+Why: [FRAMEWORK_RATIONALE — e.g., SEO support, server components, production-proven]
 ```
 
 **Example:**
@@ -56,10 +56,10 @@ Why: SEO support, server components, excellent DX, production-proven
 
 ### Backend/API
 ```
-API Framework: [Next.js API Routes / Express / FastAPI / Django REST / etc.]
-Database: [PostgreSQL / MySQL / MongoDB / etc.]
-ORM: [Prisma / Drizzle / TypeORM / Mongoose / etc.]
-Caching: [Redis / None / In-memory]
+API Framework: [API_FRAMEWORK — e.g., Next.js 14 API Routes (serverless functions)]
+Database: [DATABASE_CHOICE — e.g., PostgreSQL 15 via Supabase]
+ORM: [ORM_CHOICE — e.g., Prisma (type-safe, excellent migrations)]
+Caching: [CACHING_STRATEGY — e.g., Redis (Upstash) for session data and rate limiting]
 ```
 
 **Example:**
@@ -72,12 +72,12 @@ Caching: Redis (Upstash) for session data and rate limiting
 
 ### Frontend
 ```
-UI Framework: [React / Vue / Svelte / etc.]
-Styling: [Tailwind / CSS Modules / Styled Components / MUI / etc.]
-Component Library: [shadcn/ui / MUI / Ant Design / Custom]
-State Management: [Zustand / Redux / Context API / TanStack Query]
-Forms: [React Hook Form / Formik / etc.]
-Validation: [Zod / Yup / Joi]
+UI Framework: [UI_FRAMEWORK — e.g., React 18 with TypeScript]
+Styling: [STYLING_CHOICE — e.g., Tailwind CSS 3 + shadcn/ui components]
+Component Library: [COMPONENT_LIBRARY — e.g., shadcn/ui]
+State Management: [STATE_MANAGEMENT — e.g., TanStack Query for server state, Zustand for client state]
+Forms: [FORMS_LIBRARY — e.g., React Hook Form + Zod for validation]
+Validation: [VALIDATION_LIBRARY — e.g., Zod]
 ```
 
 **Example:**
@@ -91,10 +91,10 @@ Icons: Lucide React
 
 ### Authentication & Authorization
 ```
-Auth Provider: [Clerk / Auth0 / Supabase Auth / NextAuth / Custom]
-Strategy: [JWT / Session / OAuth / etc.]
-Social Logins: [Google / GitHub / etc.]
-MFA: [Yes / No / Future]
+Auth Provider: [AUTH_PROVIDER — e.g., Clerk (managed auth, handles edge cases)]
+Strategy: [AUTH_STRATEGY — e.g., Session-based with secure httpOnly cookies]
+Social Logins: [SOCIAL_LOGIN_PROVIDERS — e.g., Google, GitHub, Microsoft]
+MFA: [MFA_POLICY — e.g., Email OTP + Authenticator app (required for admin roles)]
 ```
 
 **Example:**
@@ -108,9 +108,9 @@ RBAC: Custom roles (admin, user, viewer) via Clerk metadata
 
 ### Payment Processing (if applicable)
 ```
-Payment Provider: [Stripe / Paddle / LemonSqueezy / etc.]
-Billing Model: [Subscription / One-time / Usage-based]
-Currency Support: [USD / Multi-currency]
+Payment Provider: [PAYMENT_PROVIDER — e.g., Stripe]
+Billing Model: [BILLING_MODEL — e.g., Subscription (monthly/annual plans)]
+Currency Support: [CURRENCY_SUPPORT — e.g., NZD/AUD/USD (multi-currency)]
 ```
 
 **Example:**
@@ -127,11 +127,11 @@ Webhooks: Handle subscription.created, invoice.paid, customer.deleted
 
 ### Target Users
 ```
-Primary Users: [Who will use this the most?]
-User Personas: [2-3 key persona descriptions]
-Technical Level: [Non-technical / Mixed / Technical]
-Access Methods: [Web / Mobile web / Native app / API]
-Geographic Distribution: [Local / National / Global]
+Primary Users: [PRIMARY_USER_ROLE — e.g., Marketing managers and analysts]
+User Personas: [USER_PERSONA_DESCRIPTIONS — e.g., 1. Sarah (non-technical, needs dashboards); 2. Mike (semi-technical, wants exports)]
+Technical Level: [USER_TECHNICAL_LEVEL — e.g., Mostly non-technical (80%), some power users]
+Access Methods: [ACCESS_METHODS — e.g., Web (desktop and mobile browsers), future native mobile app]
+Geographic Distribution: [GEOGRAPHIC_SCOPE — e.g., New Zealand and Australia primarily]
 ```
 
 **Example:**
@@ -150,11 +150,11 @@ Geographic: Global (US, Europe, APAC) - need i18n support
 
 ### Scale Expectations
 ```
-Launch: [X users]
-Year 1: [X users]
-Year 3: [X users]
-Peak Concurrent: [X users at once]
-Data Volume: [X records / requests per day]
+Launch: [LAUNCH_USER_TARGET — e.g., 50 beta customers (~500 users)]
+Year 1: [YEAR_1_USER_TARGET — e.g., 500 customers (~5,000 users)]
+Year 3: [YEAR_3_USER_TARGET — e.g., 2,000 customers (~20,000 users)]
+Peak Concurrent: [PEAK_CONCURRENT_USERS — e.g., 500 users during business hours]
+Data Volume: [DATA_VOLUME_TARGET — e.g., 1M API requests/day, 100GB data storage]
 ```
 
 **Example:**
@@ -348,6 +348,14 @@ Naming:
 - Functions: camelCase (getUserData)
 - Constants: UPPER_SNAKE_CASE (API_BASE_URL)
 - Types: PascalCase (User, UserProfile)
+
+Naming — Verbose Over Concise:
+- Prioritise clarity over brevity in all identifiers
+- ✅ getUserAuthenticationToken() not getToken()
+- ✅ isEmailValidationSuccessful not isValid
+- ✅ MAX_RETRY_ATTEMPTS not MAX_RETRIES
+- ✅ handleUserProfileSubmit not handleSubmit
+- Rule: a new developer should understand the purpose of any variable or function without reading its implementation
 
 Comments:
 - JSDoc for all public functions

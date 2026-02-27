@@ -1,16 +1,16 @@
-# Constitution: [Your Project Name]
+# Constitution: [PROJECT_NAME]
 
 **Type:** Internal Tool
-**Created:** [Date]
-**Last Updated:** [Date]
+**Created:** [CONSTITUTION_DATE — YYYY-MM-DD]
+**Last Updated:** [CONSTITUTION_DATE — YYYY-MM-DD]
 
 ---
 
 ## Project Overview
 
-**Name:** [Your Project Name]
+**Name:** [PROJECT_NAME]
 
-**Purpose:** [One paragraph describing what this tool does and why it exists]
+**Purpose:** [PROJECT_PURPOSE — One paragraph describing what this tool does and why it exists]
 
 **Example:**
 ```
@@ -45,8 +45,8 @@ current spreadsheet-based system which makes collaboration difficult.
 
 **Your choice:**
 ```
-Framework: Next.js 14 with App Router
-Runtime: Node.js 18
+Framework: [FRAMEWORK_CHOICE — e.g., Next.js 14 with App Router]
+Runtime: [RUNTIME_CHOICE — e.g., Node.js 18]
 ```
 
 ### Database
@@ -60,9 +60,9 @@ Runtime: Node.js 18
 
 **Your choice:**
 ```
-Database: Supabase (PostgreSQL)
-Connection: Use Supabase client with environment variable
-Migrations: Manual SQL files in db/migrations/
+Database: [DATABASE_CHOICE — e.g., Supabase (PostgreSQL)]
+Connection: [DATABASE_CONNECTION — e.g., Use Supabase client with environment variable]
+Migrations: [MIGRATION_APPROACH — e.g., Manual SQL files in db/migrations/]
 ```
 
 ### Frontend/Styling
@@ -75,9 +75,9 @@ Migrations: Manual SQL files in db/migrations/
 
 **Your choice:**
 ```
-Styling: Tailwind CSS 3 via CDN
-Why: Fast to prototype, no build config needed
-UI: Functional > beautiful (forms, tables, basic layouts)
+Styling: [STYLING_CHOICE — e.g., Tailwind CSS 3 via CDN]
+Why: [STYLING_RATIONALE — e.g., Fast to prototype, no build config needed]
+UI: [UI_APPROACH — e.g., Functional > beautiful (forms, tables, basic layouts)]
 ```
 
 ### Authentication
@@ -89,9 +89,9 @@ UI: Functional > beautiful (forms, tables, basic layouts)
 
 **Your choice:**
 ```
-Authentication: Supabase Auth (email/password only)
-Users: Manually added (no self-signup)
-Sessions: 7-day expiration
+Authentication: [AUTH_CHOICE — e.g., Supabase Auth (email/password only)]
+Users: [USER_PROVISIONING — e.g., Manually added (no self-signup)]
+Sessions: [SESSION_DURATION — e.g., 7-day expiration]
 ```
 
 ---
@@ -100,11 +100,11 @@ Sessions: 7-day expiration
 
 ### Who Will Use This?
 ```
-Users: [Number] people in [team/department]
-Technical Level: [Non-technical / Mixed / Technical]
-Access: [Web only / Mobile also / Desktop app]
-Frequency: [Daily / Weekly / Monthly]
-Location: [Office / Remote / Hybrid]
+Users: [USER_COUNT — e.g., 5 people in the marketing team]
+Technical Level: [TECHNICAL_LEVEL — e.g., Non-technical (comfortable with web apps, not with code)]
+Access: [ACCESS_METHOD — e.g., Web only (desktop and mobile browsers)]
+Frequency: [USAGE_FREQUENCY — e.g., Daily (10-20 tasks per person)]
+Location: [WORK_LOCATION — e.g., Remote team, NZ/AU time zones]
 ```
 
 **Example:**
@@ -118,8 +118,8 @@ Location: Remote team, US time zones
 
 ### Use Cases
 ```
-Primary use case: [Main workflow this tool enables]
-Secondary use cases: [Other ways people will use it]
+Primary use case: [PRIMARY_USE_CASE — e.g., Track campaign tasks from creation to completion]
+Secondary use cases: [SECONDARY_USE_CASES — e.g., See who's working on what, filter by status]
 ```
 
 **Example:**
@@ -163,6 +163,14 @@ Specify your project structure so the AI knows where to put files:
 - Comments for "why", not "what"
 - Error messages that actually help debug
 - Consistent naming convention (camelCase, snake_case, etc.)
+
+**Naming — Verbose Over Concise:**
+- Prioritise clarity over brevity in all identifiers
+- ✅ `getUserAuthenticationToken()` not `getToken()`
+- ✅ `isEmailValidationSuccessful` not `isValid`
+- ✅ `MAX_RETRY_ATTEMPTS` not `MAX_RETRIES`
+- ✅ `handleUserProfileSubmit` not `handleSubmit`
+- Rule: a new developer should understand the purpose of any variable or function without reading its implementation
 
 ❌ **DON'T:**
 - Over-abstract or create complex patterns
@@ -239,10 +247,10 @@ const tasks = await supabase
 
 **What level of auth do you need?**
 ```
-Authentication: [How users log in]
-Authorization: [Who can do what]
-Session Management: [How long are sessions valid]
-Password Requirements: [Minimum standards]
+Authentication: [AUTH_MECHANISM — e.g., Email/password via Supabase Auth]
+Authorization: [AUTHORISATION_MODEL — e.g., All logged-in users can do everything (same team)]
+Session Management: [SESSION_POLICY — e.g., 7-day sessions, no "remember me"]
+Password Requirements: [PASSWORD_POLICY — e.g., Minimum 8 characters (Supabase default)]
 ```
 
 **Example:**
@@ -279,10 +287,10 @@ function validateTaskInput(data) {
 
 **For internal tools:**
 ```
-Sensitive Data: [What data is sensitive?]
-Encryption: [What needs encryption?]
-Access Control: [Who can access what?]
-Data Retention: [How long to keep data?]
+Sensitive Data: [SENSITIVE_DATA — e.g., None (just task descriptions and names)]
+Encryption: [ENCRYPTION_APPROACH — e.g., HTTPS only (via Vercel/Supabase)]
+Access Control: [ACCESS_CONTROL — e.g., All team members see all tasks]
+Data Retention: [DATA_RETENTION_POLICY — e.g., Keep everything (no automated deletion)]
 ```
 
 **Example:**
@@ -317,9 +325,9 @@ const dbUrl = process.env.DATABASE_URL;
 
 **What are the essential features?**
 ```
-1. [Core feature 1]
-2. [Core feature 2]
-3. [Core feature 3]
+1. [CORE_FEATURE_1 — e.g., Create tasks with title, description, assignee, due date]
+2. [CORE_FEATURE_2 — e.g., View all tasks with filters by status and assignee]
+3. [CORE_FEATURE_3 — e.g., Mark tasks as complete]
 ```
 
 **Example:**
@@ -334,8 +342,8 @@ const dbUrl = process.env.DATABASE_URL;
 
 **What can wait for version 2?**
 ```
-- [Nice to have feature 1]
-- [Nice to have feature 2]
+- [NICE_TO_HAVE_1 — e.g., Task comments/notes]
+- [NICE_TO_HAVE_2 — e.g., Email notifications when assigned]
 ```
 
 **Example:**
@@ -350,8 +358,8 @@ const dbUrl = process.env.DATABASE_URL;
 
 **Explicitly list what you WON'T build:**
 ```
-- [Feature you won't build]
-- [Another feature to avoid]
+- [OUT_OF_SCOPE_1 — e.g., Multi-tenant architecture (one team only)]
+- [OUT_OF_SCOPE_2 — e.g., Real-time collaboration (refresh to see updates is fine)]
 ```
 
 **Example:**
@@ -406,9 +414,9 @@ Automated: None initially, may add Jest tests if bugs become frequent
 
 **Choose your deployment platform:**
 ```
-Platform: [Vercel / Netlify / Replit / Heroku / AWS / Other]
-URL: [your-app.vercel.app or custom domain]
-Environment: [Staging / Production only / Both]
+Platform: [DEPLOYMENT_PLATFORM — e.g., Vercel (free tier)]
+URL: [APP_URL — e.g., marketing-tasks.vercel.app]
+Environment: [ENVIRONMENT_SETUP — e.g., Production only (no staging, low traffic)]
 ```
 
 **Example:**
@@ -438,10 +446,10 @@ Production: [Platform] with these env vars:
 
 **What's "good enough" for internal use?**
 ```
-Page Load: [Under X seconds]
-API Response: [Under X milliseconds]
-Concurrent Users: [Support X users at once]
-Uptime: [X% uptime goal]
+Page Load: [PAGE_LOAD_TARGET — e.g., Under 3 seconds (on good wifi)]
+API Response: [API_RESPONSE_TARGET — e.g., Under 1 second for most actions]
+Concurrent Users: [CONCURRENT_USER_TARGET — e.g., 5 users max (whole team)]
+Uptime: [UPTIME_TARGET — e.g., 95% is fine (can tolerate some downtime)]
 ```
 
 **Example:**
@@ -565,9 +573,9 @@ No pull requests needed (just us, internal tool)
 **Metrics and feedback:**
 ```
 Success looks like:
-1. [Measurable outcome 1]
-2. [Measurable outcome 2]
-3. [User feedback indicator]
+1. [SUCCESS_METRIC_1 — e.g., All team members use it daily within 2 weeks]
+2. [SUCCESS_METRIC_2 — e.g., Task completion rate visible (we know what's done)]
+3. [SUCCESS_METRIC_3 — e.g., Team says it's better than the old spreadsheet]
 ```
 
 **Example:**
@@ -593,11 +601,11 @@ Failure signals:
 
 **Ongoing responsibilities:**
 ```
-Owner: [Name / Role]
-Backup: [Name / Role]
-Updates: [Frequency - weekly / monthly / as-needed]
-Bug Fixes: [SLA - within X days]
-Feature Requests: [Process for requesting new features]
+Owner: [TOOL_OWNER — e.g., Alex (built it, knows the code)]
+Backup: [BACKUP_OWNER — e.g., Jordan (can debug if Alex is unavailable)]
+Updates: [UPDATE_FREQUENCY — e.g., As needed (not on a schedule)]
+Bug Fixes: [BUG_FIX_SLA — e.g., Within 2 business days for critical, 1 week for minor]
+Feature Requests: [FEATURE_REQUEST_PROCESS — e.g., Raise in team Slack channel, discuss in weekly meeting]
 ```
 
 **Example:**
@@ -648,13 +656,10 @@ Mitigation: Good filtering and search
 Keep track of major changes to this constitution:
 
 ```
-v1.0 - [Date] - Initial version
-- Defined tech stack: Next.js, Supabase, Tailwind
-- Scoped to core CRUD features
-- Deployment on Vercel
-
-v1.1 - [Date] - [What changed]
-- [Changes made]
+v1.0 - [CONSTITUTION_DATE — YYYY-MM-DD] - Initial version
+- Defined tech stack: [TECH_STACK_SUMMARY — e.g., Next.js, Supabase, Tailwind]
+- Scoped to [INITIAL_SCOPE — e.g., core CRUD features]
+- Deployment on [DEPLOYMENT_PLATFORM — e.g., Vercel]
 ```
 
 ---

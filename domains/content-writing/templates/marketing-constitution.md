@@ -1,16 +1,16 @@
-# Constitution: [Your Marketing Content]
+# Constitution: [BRAND_NAME] Marketing Content
 
 **Type:** Marketing / Conversion-Focused Content
-**Created:** [Date]
-**Last Updated:** [Date]
+**Created:** [CONSTITUTION_DATE — YYYY-MM-DD]
+**Last Updated:** [CONSTITUTION_DATE — YYYY-MM-DD]
 
 ---
 
 ## Project Overview
 
-**Content Type:** [e.g., "Landing pages", "Email campaigns", "Product pages", "Sales content"]
+**Content Type:** [CONTENT_TYPES — e.g., Landing pages, email campaigns, product pages]
 
-**Purpose:** [One paragraph describing your marketing content goals]
+**Purpose:** [MARKETING_PURPOSE — One paragraph describing your marketing content goals]
 
 **Example:**
 ```
@@ -66,12 +66,12 @@ Sales decks: Professional, data-driven, outcome-focused
 
 **Primary Persona:**
 ```
-Role: [e.g., "Product Manager"]
-Company size: [e.g., "10-50 person B2B SaaS startups"]
-Decision-making power: [e.g., "Recommends tools, doesn't have final budget approval"]
-Pain points: [e.g., "Too many tools, high costs, complexity"]
-Objections: [e.g., "Worried about migration effort, team adoption"]
-Buying triggers: [e.g., "Team complaining, current tool hitting limits"]
+Role: [BUYER_PERSONA_ROLE — e.g., Product Manager]
+Company size: [BUYER_COMPANY_SIZE — e.g., 10-50 person B2B SaaS startups]
+Decision-making power: [BUYER_DECISION_POWER — e.g., Recommends tools, doesn't have final budget approval]
+Pain points: [BUYER_PAIN_POINTS — e.g., Too many tools, high costs, complexity]
+Objections: [BUYER_OBJECTIONS — e.g., Worried about migration effort, team adoption]
+Buying triggers: [BUYING_TRIGGERS — e.g., Team complaining, current tool hitting limits]
 ```
 
 ---
@@ -253,19 +253,19 @@ Example:
 ## Success Metrics
 
 ### Primary Metrics
-- **Conversion rate:** [e.g., "Landing page: 5% visitor-to-trial"]
-- **CTA click rate:** [e.g., "Email: 15% click-through rate"]
-- **Form completion:** [e.g., "80% of form starts complete"]
+- **Conversion rate:** [CONVERSION_RATE_TARGET — e.g., Landing page: 5% visitor-to-trial]
+- **CTA click rate:** [CTA_CLICK_TARGET — e.g., Email: 15% click-through rate]
+- **Form completion:** [FORM_COMPLETION_TARGET — e.g., 80% of form starts complete]
 
 ### Secondary Metrics
-- **Time on page:** [e.g., ">30 seconds average"]
-- **Scroll depth:** [e.g., "50% reach final CTA"]
-- **Bounce rate:** [e.g., "<60% (marketing pages)"]
+- **Time on page:** [TIME_ON_PAGE_TARGET — e.g., >30 seconds average]
+- **Scroll depth:** [SCROLL_DEPTH_TARGET — e.g., 50% reach final CTA]
+- **Bounce rate:** [BOUNCE_RATE_TARGET — e.g., <60% (marketing pages)]
 
 ### Revenue Metrics
-- **Cost per acquisition (CPA):** [e.g., "$150 per customer"]
-- **Return on ad spend (ROAS):** [e.g., "3:1 ratio"]
-- **Customer lifetime value (CLV):** [e.g., "$5,000 average"]
+- **Cost per acquisition (CPA):** [CPA_TARGET — e.g., $150 per customer]
+- **Return on ad spend (ROAS):** [ROAS_TARGET — e.g., 3:1 ratio]
+- **Customer lifetime value (CLV):** [CLV_ESTIMATE — e.g., $5,000 average]
 
 ### Benchmarks by Content Type
 ```

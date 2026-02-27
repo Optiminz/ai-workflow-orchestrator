@@ -1,16 +1,16 @@
-# Constitution: [Your Blog/Publication Name]
+# Constitution: [BLOG_NAME]
 
 **Type:** Blog / Content Publication
-**Created:** [Date]
-**Last Updated:** [Date]
+**Created:** [CONSTITUTION_DATE — YYYY-MM-DD]
+**Last Updated:** [CONSTITUTION_DATE — YYYY-MM-DD]
 
 ---
 
 ## Project Overview
 
-**Name:** [Your Blog Name]
+**Name:** [BLOG_NAME]
 
-**Purpose:** [One paragraph describing what your blog covers and who it serves]
+**Purpose:** [BLOG_PURPOSE — One paragraph describing what your blog covers and who it serves]
 
 **Example:**
 ```
@@ -167,11 +167,11 @@ Case studies: Story-driven, specific, results-focused
 
 **Primary Audience:**
 ```
-Role: [e.g., "Product managers"]
-Company size: [e.g., "10-100 person tech startups"]
-Experience level: [e.g., "2-5 years experience"]
-Pain points: [e.g., "Overwhelmed by tool complexity, tight budgets"]
-Goals: [e.g., "Find simple, effective solutions quickly"]
+Role: [AUDIENCE_ROLE — e.g., Product managers]
+Company size: [AUDIENCE_COMPANY_SIZE — e.g., 10-100 person tech startups]
+Experience level: [AUDIENCE_EXPERIENCE — e.g., 2-5 years experience]
+Pain points: [AUDIENCE_PAIN_POINTS — e.g., Overwhelmed by tool complexity, tight budgets]
+Goals: [AUDIENCE_GOALS — e.g., Find simple, effective solutions quickly]
 ```
 
 **Secondary Audience (if applicable):**
@@ -184,7 +184,7 @@ Goals: [e.g., "Find simple, effective solutions quickly"]
 ## Content Standards
 
 ### Writing Standards
-- **Word count range:** [e.g., "1,200-2,500 words for blog posts"]
+- **Word count range:** [WORD_COUNT_RANGE — e.g., 1,200-2,500 words for blog posts]
 - **Paragraph length:** 2-4 sentences (max 150 words)
 - **Sentence length:** Average <20 words
 - **Readability target:** Flesch Reading Ease >60 (general audience)
@@ -314,10 +314,10 @@ Every article must have:
 
 **Primary CTA:**
 ```
-Goal: [e.g., "Free trial signups"]
+Goal: [PRIMARY_CTA_GOAL — e.g., Free trial signups]
 Placement: End of article (after conclusion)
 Format: Clear value prop + action button/link
-Example: "Ready to simplify your workflow? Try [Product] free for 14 days."
+Example: [PRIMARY_CTA_EXAMPLE — e.g., "Ready to simplify your workflow? Try [Product] free for 14 days."]
 ```
 
 **Secondary CTA (optional):**
@@ -337,16 +337,16 @@ Example: "Download our PM tool comparison checklist (PDF)"
 ## Publishing Standards
 
 ### Editorial Calendar
-- **Frequency:** [e.g., "2 posts per week"]
-- **Days:** [e.g., "Tuesday and Thursday, 9am EST"]
-- **Lead time:** [e.g., "Articles finalized 2 days before publish"]
+- **Frequency:** [PUBLISHING_FREQUENCY — e.g., 2 posts per week]
+- **Days:** [PUBLISHING_DAYS — e.g., Tuesday and Thursday, 9am NZST]
+- **Lead time:** [EDITORIAL_LEAD_TIME — e.g., Articles finalised 2 days before publish]
 
 ### Review Process
 1. **Writer:** First draft (artifacts/02-draft-v1.md)
 2. **SEO Specialist:** Optimization report + draft-v2
 3. **Fact Checker:** Verification + draft-v3
 4. **Editor:** Final polish + draft-v4-FINAL
-5. **Approval:** [Who approves?] reviews before publish
+5. **Approval:** [APPROVAL_OWNER — e.g., Content Lead] reviews before publish
 
 ### Post-Publication
 - [ ] Share on social media (LinkedIn, Twitter)
@@ -380,9 +380,9 @@ Example:
 ## Success Metrics
 
 ### Traffic Goals
-- **Month 3:** [e.g., "500 monthly visits per article"]
-- **Month 6:** [e.g., "2,000 monthly visits per article"]
-- **Year 1:** [e.g., "5,000 monthly visits per article"]
+- **Month 3:** [MONTH_3_TRAFFIC_GOAL — e.g., 500 monthly visits per article]
+- **Month 6:** [MONTH_6_TRAFFIC_GOAL — e.g., 2,000 monthly visits per article]
+- **Year 1:** [YEAR_1_TRAFFIC_GOAL — e.g., 5,000 monthly visits per article]
 
 ### Engagement Goals
 - **Time on page:** >3 minutes average
@@ -390,9 +390,9 @@ Example:
 - **Scroll depth:** >75% reach conclusion
 
 ### Conversion Goals
-- **CTA clicks:** [e.g., "50 clicks per article per month"]
-- **Trial signups:** [e.g., "10 signups per article per month"]
-- **Email signups:** [e.g., "25 email captures per article per month"]
+- **CTA clicks:** [CTA_CLICK_GOAL — e.g., 50 clicks per article per month]
+- **Trial signups:** [TRIAL_SIGNUP_GOAL — e.g., 10 signups per article per month]
+- **Email signups:** [EMAIL_SIGNUP_GOAL — e.g., 25 email captures per article per month]
 
 ### SEO Goals
 - **Keyword rankings:** Top 10 for primary keyword within 3 months

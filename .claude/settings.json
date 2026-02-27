@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "/Users/malcolm/Projects/ai-workflow-orchestrator/.claude/agents"
+    ]
+  }
+}

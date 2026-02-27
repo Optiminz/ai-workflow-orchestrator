@@ -9,7 +9,6 @@ Build production-ready software using AI with constitutional governance and spec
 - **5 Personas:** Product Owner, Solutions Architect, Developer, QA Engineer, Technical Writer
 - **16 Prompts:** Organized across 5 phases (setup, planning, implementation, review, documentation)
 - **3 Constitution Templates:** Internal tool, Client app, AI agent
-- **3 Complete Examples:** Expense tracker, SaaS dashboard, Slack bot
 - **3 Tool Setup Guides:** Claude Code, Cursor, Replit
 
 ---
@@ -140,47 +139,6 @@ Software development uses an **iterative workflow**:
 Unlike content writing (linear), software iterates between implementation and review multiple times.
 
 **[View Full Workflow Details →](./workflow/workflow-overview.md)**
-
----
-
-## Examples
-
-### 1. Internal Tool: Expense Tracker
-**Type:** Internal team tool (10-person sales team)
-**Constitution:** [internal-tool-constitution.md](./examples/internal-tool/CONSTITUTION.md)
-
-A simple expense tracking app showing fast iteration priorities.
-
-**[View Example →](./examples/internal-tool/)**
-
----
-
-### 2. Client App: SaaS Dashboard
-**Type:** Customer-facing SaaS application
-**Constitution:** [client-app-constitution.md](./examples/client-app/CONSTITUTION.md)
-
-Production-grade analytics dashboard with security, performance, and polish.
-
-**[View Example →](./examples/client-app/)**
-
----
-
-### 3. AI Agent: Slack Support Bot
-**Type:** Customer support automation bot
-**Constitution:** [ai-agent-constitution.md](./examples/ai-agent/CONSTITUTION.md)
-
-Intelligent Slack bot showing reliability and integration priorities.
-
-**[View Example →](./examples/ai-agent/)**
-
----
-
-## Sample Outputs
-
-See reference examples of what persona outputs look like:
-
-- **[Sample PRD](./examples/sample-outputs/sample-prd.md)** - Product Requirements Document for a dark mode feature
-- **[Sample Tech Spec](./examples/sample-outputs/sample-tech-spec.md)** - Technical specification for implementing dark mode
 
 ---
 
