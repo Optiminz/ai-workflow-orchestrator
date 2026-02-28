@@ -1,205 +1,95 @@
-# 5-Minute Quick Start
-
-Get up and running with AI Workflow Orchestrator in 5 minutes.
+# Quick Start — Create Your First AI Workflow
 
 ---
 
-## 1. Choose Your Domain (30 seconds)
+## 1. Prerequisites
 
-Pick the domain that matches your work:
-
-- **[Software Development](./domains/software-development/)** - Apps, APIs, tools, bots
-- **[Content Writing](./domains/content-writing/)** - Blogs, articles, marketing, docs
-
-**Not sure?** See the [domain selection guide](./domains/README.md)
+- **With Claude Code (recommended):** Install Claude Code at https://claude.ai/claude-code. That's it.
+- **Without Claude Code:** You'll use the manual approach — browse examples and adapt templates by hand.
 
 ---
 
-## 2. Copy Your Constitution (1 minute)
+## 2. With Claude Code (5 minutes)
 
-Every project starts with a CONSTITUTION.md file that defines your non-negotiable principles.
+### Step 1: Clone and open
 
-### For Software Development:
-Choose a template from [`domains/software-development/templates/`](./domains/software-development/templates/):
-- **internal-tool-constitution.md** - Internal tools (fast iteration, minimal security)
-- **client-app-constitution.md** - Customer-facing apps (production-grade)
-- **ai-agent-constitution.md** - Bots, APIs, automation
+```bash
+git clone https://github.com/Optiminz/ai-workflow-orchestrator.git
+cd ai-workflow-orchestrator
+claude  # opens Claude Code
+```
 
-### For Content Writing:
-Choose a template from [`domains/content-writing/templates/`](./domains/content-writing/templates/):
-- **blog-constitution.md** - Company blogs, thought leadership, SEO content
-- **marketing-constitution.md** - Landing pages, campaigns, sales content
-- **technical-constitution.md** - Product docs, API guides, tutorials
+### Step 2: Run the workflow wizard
 
-**Action:** Copy the template to your project folder and customize:
-- Project name and purpose
-- Target audience
-- Key constraints
-- Success metrics
+```
+/new-workflow
+```
+
+### Step 3: Follow the guided flow
+
+Claude walks you through 6 phases:
+
+1. **Domain Discovery** — What's this workflow for?
+2. **Process Mapping** — How does your process work today?
+3. **Persona Definition** — Who does what? (roles → personas → agents)
+4. **Constitution Drafting** — What are your quality standards?
+5. **Memory & Workflow Design** — How should work be tracked?
+6. **Generation** — Claude creates all the files
+
+### Step 4: Use your new workflow
+
+```bash
+cd ~/Projects/ai-[your-domain]-workflow
+# Your workflow is ready — start with Persona 1
+```
 
 ---
 
-## 3. Start Phase 1: Planning (3 minutes)
+## 3. Without Claude Code (30 minutes)
 
-Use the first persona prompt to kick off your workflow.
+### Step 1: Clone the repo and explore
 
-### For Software Development:
+```bash
+git clone https://github.com/Optiminz/ai-workflow-orchestrator.git
+cd ai-workflow-orchestrator
+```
 
-1. **Copy the prompt:** [`prompts/phase-1-planning/1.1-product-owner-prd.md`](./domains/software-development/prompts/phase-1-planning/1.1-product-owner-prd.md)
-2. **Fill in context:** What feature/project are you building?
-3. **Give to your AI:** Use Claude Code, Cursor, or copy-paste into ChatGPT/Claude
-4. **Review output:** Check `artifacts/01-prd.md` (or wherever the AI saved it)
+### Step 2: Study the examples
 
-### For Content Writing:
+- Read `examples/software-development/` or `examples/content-writing/` to see the pattern
+- Read `docs/concepts/` to understand the principles
 
-1. **Copy the prompt:** [`prompts/phase-1-planning/1.1-content-brief.md`](./domains/content-writing/prompts/phase-1-planning/1.1-content-brief.md)
-2. **Fill in context:** Topic, target audience, keywords, goals
-3. **Give to your AI:** Use Claude Code, Cursor, or copy-paste
-4. **Review output:** Check `artifacts/01-content-brief.md`
+### Step 3: Create your workflow manually
 
-**Tip:** If the output isn't quite right, iterate:
-- Give feedback: "Good, but emphasize X more"
-- AI produces v2: `artifacts/01-content-brief-v2.md`
-- Approve when ready
+- Create a new directory for your workflow
+- Copy templates from `scaffolding/` to your new directory
+- Fill in the `[PLACEHOLDER — e.g., ...]` values with your domain specifics
+- Key files to customize: constitution, personas, CLAUDE.md
+
+### Step 4: Start using it
+
+- Each persona has a matching copy-paste prompt in `prompts/`
+- Paste the prompt into any AI tool (Claude, ChatGPT, etc.)
+- Follow the phase order: r → K → Ω → α
 
 ---
 
-## 4. Continue Through Phases
+## 4. What's Next
 
-Once Phase 1 is approved, move to the next persona:
-
-### Software Development Flow:
-```
-Phase 1: Product Owner (PRD) → Architect (Tech Spec)
-Phase 2: Developer (Implementation)
-Phase 3: QA Engineer (Testing & Review)
-Phase 4: Technical Writer (Documentation)
-```
-
-See the [software workflow overview](./domains/software-development/workflow/workflow-overview.md)
-
-### Content Writing Flow:
-```
-Phase 1: Strategist (Brief) → Strategist (Outline)
-Phase 2: Writer (First Draft)
-Phase 3: SEO Specialist → Fact Checker → Editor
-Phase 4: Meta Tags → Distribution Plan
-```
-
-See the [content workflow overview](./domains/content-writing/workflow/workflow-overview.md)
+- Read your generated workflow's README and SETUP-GUIDE
+- Run your first cycle end-to-end
+- After 2–3 cycles, review and refine your constitution
+- The system improves over time through the Evolutionist pattern
 
 ---
 
-## 5. Working Solo vs. Teams
+## 5. Common Questions
 
-### Solo Practitioners (You + AI)
+**"Do I need Claude Code?"**
+No, but it's faster. Without it, use copy-paste prompts.
 
-You invoke each persona sequentially:
-1. You act as the **Strategist persona** (via AI prompt)
-2. Review the output
-3. You act as the **Creator persona** (via AI prompt)
-4. Review the output
-5. You act as the **Reviewer persona** (via AI prompt)
-6. You judge which feedback to accept/reject
+**"Can I modify the generated workflow?"**
+Yes, it's yours. The scaffolding is a starting point.
 
-**Key insight:** Each persona checks the previous one's work. You're using AI to give yourself multiple expert perspectives.
-
-### Small Teams (2-10 people)
-
-Assign personas to real people:
-- Person A: Product Owner + Architect
-- Person B: Developer
-- Person C: QA Engineer + Technical Writer
-
-Or mix: Some personas are people, some are AI-assisted.
-
-See [Working Solo](./docs/guides/working-solo.md) and [Working with Teams](./docs/guides/working-with-teams.md) for details.
-
----
-
-## Tips for Success
-
-### 1. Version Your Artifacts
-Don't overwrite files. Create versions:
-```
-artifacts/01-prd-v1.md
-artifacts/01-prd-v2.md  (after architect feedback)
-artifacts/01-prd-v3.md  (final)
-```
-
-This creates a transparent iteration history.
-
-### 2. Use workflow-log.md
-Track decisions and cross-persona dialogue:
-```markdown
-## Decision Log
-
-### 2024-12-04: Tech Stack Choice
-- **Issue:** React vs Vue for frontend
-- **Architect:** Recommended React (team familiarity, hiring)
-- **Developer:** Agreed
-- **Decision:** React + TypeScript
-```
-
-### 3. Don't Skip Phases
-The workflow has gates for a reason:
-- ❌ Don't code before you have an approved tech spec
-- ❌ Don't publish content before fact-checking
-- ✅ Each phase builds on the previous one
-
-### 4. Iterate Within Phases
-If a persona finds issues, don't advance phases. Fix them first:
-```
-Draft v1 → Editor finds 5 issues → Draft v2 → Editor approves → Advance
-```
-
-### 5. Customize for Your Needs
-The templates are starting points. Adapt:
-- Add personas if needed (e.g., a Security Specialist)
-- Skip personas if not needed (e.g., no QA for a quick prototype)
-- Merge prompts (e.g., combine SEO + Editing for faster workflow)
-
-See [Customizing Personas](./docs/guides/customizing-personas.md)
-
----
-
-## What's Next?
-
-### See Examples
-- [Software: SaaS Dashboard](./domains/software-development/examples/client-app/)
-- [Content: SaaS Blog Post](./domains/content-writing/examples/saas-blog-post/)
-
-These show real iteration histories and cross-persona dialogue.
-
-### Explore Your Domain
-- [Software Development](./domains/software-development/) - All personas, prompts, templates
-- [Content Writing](./domains/content-writing/) - All personas, prompts, templates
-
-### Read the Guides
-- [Choosing Your Domain](./docs/guides/choosing-your-domain.md)
-- [Working Solo](./docs/guides/working-solo.md)
-- [Working with Teams](./docs/guides/working-with-teams.md)
-- [Customizing Personas](./docs/guides/customizing-personas.md)
-
----
-
-## Common Questions
-
-**Q: Do I need to use all personas?**
-A: No. Start with the essential ones (Strategist, Creator, Reviewer). Add more as needed.
-
-**Q: Can I use this with ChatGPT, Claude, or other AI tools?**
-A: Yes. The prompts work with any AI. Copy-paste or use AI coding tools like Claude Code, Cursor, Replit.
-
-**Q: What if I don't agree with a persona's feedback?**
-A: You're the orchestrator. You judge which feedback to accept. AI provides expertise, you make decisions.
-
-**Q: How long does a full workflow take?**
-A: Depends on scope. A blog post: 2-4 hours. A small feature: 1-2 days. A full app: weeks (but with quality gates at every step).
-
-**Q: Can I mix domains?**
-A: Yes! Use software personas for the code, content personas for the docs, grant personas for funding proposals.
-
----
-
-**Ready to start?** → [Choose your domain](./domains/) and pick your first prompt!
+**"What if my domain doesn't fit the r/K/Ω/α model?"**
+Most do. If not, the wizard adapts the phases to your process.
