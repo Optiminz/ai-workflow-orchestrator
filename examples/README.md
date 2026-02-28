@@ -1,191 +1,98 @@
-# Choose Your Domain
+# Example Workflows
 
-Select the domain that matches your work. Each domain includes specialized personas, phase-based prompts, constitution templates, and example projects.
+> **These are reference examples — not the tool itself.** To create your own workflow, use `/new-workflow` in Claude Code or follow the [Quick Start](../QUICKSTART.md).
+
+Study these examples to understand the patterns before creating your own.
 
 ---
 
-## Software Development
+## Software Development Example
 
 **Build production-ready software using AI with constitutional governance and specialized personas.**
 
-### Best For
-- Web applications (frontend, backend, full-stack)
-- Mobile apps (iOS, Android, cross-platform)
-- APIs and microservices
-- Developer tools and CLIs
-- AI agents and bots
-- Internal automation tools
-
 ### What's Included
-- **5 Personas:** Product Owner, Solutions Architect, Developer, QA Engineer, Technical Writer
-- **16 Prompts:** Organized across 5 phases (setup, planning, implementation, review, documentation)
+- **5 Personas:** Product Owner → Solutions Architect → Specialist Developer → QA Engineer → Technical Writer
+- **5 Phases with 16 Prompts:** Setup, Planning, Implementation, Review, Documentation
 - **3 Constitution Templates:** Internal tool, Client app, AI agent
-- **3 Tool Setup Guides:** Claude Code, Cursor, Replit
 
-### Workflow Type
-**Iterative:** Build → Test → Refactor → Repeat
-
-Best for projects that need continuous improvement and testing cycles.
-
-### Example Workflow
+### Workflow Shape
 ```
 Phase 0: Complexity Estimator
 Phase 1: Product Owner (PRD) → Architect (Tech Spec, Schema, API)
-Phase 2: Developer (Implementation)
+Phase 2: Specialist Developer (Implementation)
 Phase 3: QA Engineer (Testing, Security, Code Review)
 Phase 4: Technical Writer (Documentation)
 ```
 
-**[Get Started with Software Development →](./software-development/)**
+**[Explore the Software Development Example →](./software-development/)**
 
 ---
 
-## Content Writing
+## Content Writing Example
 
-**Create high-quality content using AI with brand voice consistency and SEO optimization.**
-
-### Best For
-- Blog posts and articles
-- Marketing content (landing pages, emails, social media)
-- Product documentation
-- Technical tutorials and guides
-- Thought leadership content
-- SEO-optimized web content
+**Create high-quality content using AI with brand voice consistency and structured quality gates.**
 
 ### What's Included
-- **5 Personas:** Content Strategist, Writer, SEO Specialist, Fact Checker, Editor
-- **12 Prompts:** Organized across 4 phases (planning, creation, refinement, publishing)
+- **5 Personas:** Content Strategist → Content Architect → Content Writer → Fact Checker → Editor
+- **4 Phases with 12 Prompts:** Planning, Creation, Refinement, Publishing
 - **3 Constitution Templates:** Blog, Marketing, Technical docs
 
-### Workflow Type
-**Linear:** Plan → Draft → Optimize → Publish
-
-Best for content with deadlines and structured publishing workflows.
-
-### Example Workflow
+### Workflow Shape
 ```
 Phase 1: Content Strategist (Brief, Keywords, Outline)
-Phase 2: Writer (First Draft) + Strategist (Media Planning)
-Phase 3: SEO Specialist → Fact Checker → Editor
+Phase 2: Content Architect (Structure) + Content Writer (First Draft)
+Phase 3: Fact Checker → Editor
 Phase 4: Meta Tags → Distribution Checklist
 ```
 
-**[Get Started with Content Writing →](./content-writing/)**
+**[Explore the Content Writing Example →](./content-writing/)**
 
 ---
 
-## Grant Writing (Coming Soon)
+## Production Example (External)
 
-**Write competitive grant proposals with compliance checks and evidence-based narratives.**
-
-### Best For
-- Foundation grants
-- Government proposals (federal, state, local)
-- Corporate sponsorships
-- Research funding applications
-- Non-profit funding requests
-
-### What's Included (Planned)
-- **5 Personas:** Grant Strategist, Writer, Budget Analyst, Compliance Reviewer, Editor
-- **12 Prompts:** Organized across 4 phases (strategy, development, review, finalization)
-- **3 Constitution Templates:** Foundation, Government, Corporate
-- **2 Complete Examples:** Community health grant, Education research grant
-
-### Workflow Type
-**Linear with Hard Deadlines:** Strategy → Draft → Compliance → Submit
-
-Best for proposals with strict requirements and submission deadlines.
-
-### Status
-**Planned for v2.** Want this domain sooner? [Open an issue](https://github.com/mdshearer/ai-workflow-orchestrator/issues) or [contribute](../CONTRIBUTING.md)!
+**[ai-dev-orchestrator](https://github.com/Optiminz/ai-dev-orchestrator)** — A production coding workflow built with this framework. Shows how constitutions, personas, and phases work together in a real project context.
 
 ---
 
-## Decision Guide
+## What to Look For in These Examples
 
-**Not sure which domain to use?** Answer these questions:
+Study these patterns as you read through the examples:
 
-### Question 1: What are you creating?
+**Persona structure (single responsibility)**
+Each persona owns exactly one phase or concern. The Product Owner never writes code; the QA Engineer never writes docs. This boundary prevents context bleed and keeps AI outputs focused.
 
-| Creating... | Use Domain... |
-|------------|--------------|
-| Software, apps, tools, APIs | **Software Development** |
-| Written content, marketing, docs | **Content Writing** |
-| Funding proposals, grant applications | **Grant Writing** (coming soon) |
+**Constitutions as quality definitions**
+The Kill List in each constitution template defines what failure looks like — not what success looks like. This inversion is intentional: it's easier to define and detect failure than to enumerate all forms of success.
 
-### Question 2: What's your workflow style?
+**Phases as quality gates**
+Work only moves forward when the current phase output meets its acceptance criteria. The next persona's prompt assumes the previous output is complete and valid.
 
-| Workflow Need... | Use Domain... |
-|-----------------|--------------|
-| Continuous iteration and testing | **Software Development** |
-| Structured publish-by-date workflow | **Content Writing** |
-| Hard deadline with compliance rules | **Grant Writing** (coming soon) |
-
-### Question 3: What quality checks do you need?
-
-| Quality Focus... | Use Domain... |
-|-----------------|--------------|
-| Tests, security, performance | **Software Development** |
-| SEO, brand voice, fact-checking | **Content Writing** |
-| Compliance, budget validation, competitiveness | **Grant Writing** (coming soon) |
+**Prompts mapped to personas (copy-paste ready)**
+Each prompt is scoped to a single persona in a single phase. You copy the prompt, paste it into a new Claude session, and the persona context is fully established within that prompt — no prior conversation history required.
 
 ---
 
-## Can I Use Multiple Domains?
+## Using Personas Across Examples
 
-**Yes!** Many projects span domains:
+You can mix personas from different examples when your project spans domains.
 
-### Example: Building a SaaS Product
-1. **Software Development** - Build the app
-2. **Content Writing** - Create marketing site, blog, docs
-3. **Grant Writing** - Apply for startup funding (if applicable)
+**Example: Technical Blog Post**
+- Use **Content Strategist** (content example) for the brief
+- Use **Specialist Developer** (software example) for code examples
+- Use **Fact Checker** (content example) for accuracy review
+- Use **Technical Writer** (software example) for clarity and structure
 
-Each domain has its own constitution, personas, and workflow. You orchestrate them all.
-
----
-
-## Can I Mix Personas Across Domains?
-
-**Yes!** Personas are modular:
-
-### Example: Technical Blog Post
-- Use **Content Strategist** (content domain) for the brief
-- Use **Developer** (software domain) for code examples
-- Use **SEO Specialist** (content domain) for optimization
-- Use **Technical Writer** (software domain) for clarity
-
-Adapt the framework to your needs.
+Personas are modular. Adapt the framework to your actual workflow rather than forcing your workflow into a predefined shape.
 
 ---
 
-## Can I Create a Custom Domain?
+## Building a Custom Workflow
 
-**Yes!** See [CONTRIBUTING.md](../CONTRIBUTING.md) for:
-- Domain proposal template
-- Persona creation guide
-- Prompt structure requirements
-- Quality standards
-
-**Popular requests for future domains:**
-- Product Design (UI/UX)
-- Marketing Campaigns
-- Research Papers
-- Video Production
-- Event Planning
-
-Want to see one of these? [Open an issue](https://github.com/mdshearer/ai-workflow-orchestrator/issues)!
-
----
-
-## What's Next?
-
-1. **Choose your domain** (Software Development or Content Writing)
-2. **Read the domain README** to understand personas and workflow
-3. **Pick a constitution template** that matches your project type
-4. **Start with Phase 1** using the first prompt
-5. **Follow the workflow** through all phases
-
-**Ready?** Pick your domain above and get started!
+The examples above are starting points, not requirements. See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidance on:
+- Creating new personas with single-responsibility scope
+- Structuring constitution templates for your domain
+- Designing prompts that are copy-paste ready with no implicit context
 
 ---
 
@@ -194,4 +101,4 @@ Want to see one of these? [Open an issue](https://github.com/mdshearer/ai-workfl
 - **Quick Start:** [5-Minute Guide](../QUICKSTART.md)
 - **Working Solo:** [Solo Practitioner Guide](../docs/guides/working-solo.md)
 - **Working with Teams:** [Team Collaboration Guide](../docs/guides/working-with-teams.md)
-- **Customizing:** [Persona Customization Guide](../docs/guides/customizing-personas.md)
+- **Customizing Personas:** [Persona Customization Guide](../docs/guides/customizing-personas.md)
