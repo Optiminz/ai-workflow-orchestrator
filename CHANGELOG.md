@@ -11,10 +11,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - Examples directories removed — promised complete worked examples that weren't implemented, creating false expectations
+- `scaffolding/agents/agent-template.yaml` — replaced with production-derived markdown templates
+- `scaffolding/workflows/workflow-template.yaml` — replaced with three workflow variant templates
+- `scaffolding/memory/` — old memory templates replaced with upgraded versions in `scaffolding/memory-templates/`
 
 ### Added
 - `.claude/` project setup with CLAUDE.md, learnings system, and Claude Code agents for all personas
 - `CHANGELOG.md` for tracking changes
+- `scaffolding/claude-md-template.md` — production-derived CLAUDE.md for generated workflow repos (AI quick start, memory protocol, persona pipeline diagram, quality gates)
+- `scaffolding/constitution-template.md` — production-derived with Kill List, 5-dimension scoring rubric, phase constraints, evolution rules
+- `scaffolding/persona-template.md` — full persona structure with memory protocol, handoff, quality checklist, constitution enforcement
+- `scaffolding/agent-template.md` — condensed Claude Code agent file format (role metadata, responsibilities, critical rules, handoff)
+- `scaffolding/prompt-template.md` — copy-paste prompt structure (context, rules, inputs, instructions, output format, handoff)
+- `scaffolding/project-learnings-template.md` — cross-project intelligence file (patterns, anti-patterns, constitution updates log)
+- `scaffolding/memory-templates/context-template.md` — upgraded volatile memory template (~500 tokens, handoff-focused)
+- `scaffolding/memory-templates/memory-template.md` — upgraded persistent history template (append-only, Human Edits Log with pattern detection)
+- `scaffolding/workflow-templates/full-workflow.md` — all personas, highest quality, upgrade/downgrade paths
+- `scaffolding/workflow-templates/quick-workflow.md` — Researcher skipped, faster cycle, comparison table
+- `scaffolding/workflow-templates/simple-workflow.md` — minimal personas, fastest cycle, Full vs Quick vs Simple comparison
 
 ### Changed
 - Constitution templates updated with verbose placeholder names (`[PLACEHOLDER_NAME — e.g., ...]` format)
