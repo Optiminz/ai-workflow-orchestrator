@@ -1,7 +1,14 @@
 {
   "permissions": {
+    "allow": [
+      "*",
+      "Bash(git add CHANGELOG.md scaffolding/agent-template.md scaffolding/claude-md-template.md scaffolding/constitution-template.md scaffolding/memory-templates/ scaffolding/persona-template.md scaffolding/project-learnings-template.md scaffolding/prompt-template.md scaffolding/workflow-templates/ scaffolding/agents/agent-template.yaml scaffolding/memory/constitution-template.md scaffolding/memory/context-template.md scaffolding/memory/memory-template.md scaffolding/memory/project-learnings-template.md scaffolding/workflows/workflow-template.yaml)",
+      "Bash(git commit:*)"
+    ],
     "additionalDirectories": [
-      "/Users/malcolm/Projects/ai-workflow-orchestrator/.claude/agents"
+      "/Users/malcolm/Projects/ai-workflow-orchestrator/.claude/agents",
+      "/Users/malcolm/Projects/ai-workflow-orchestrator/docs",
+      "/Users/malcolm/Projects/ai-workflow-orchestrator/.claude"
     ]
   }
 }
