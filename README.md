@@ -1,192 +1,126 @@
 # AI Workflow Orchestrator
 
-**Build high-quality work in any domain using AI with constitutional governance and specialized personas.**
+Turn any domain process into a structured AI workflow with constitutional governance, specialized personas, and quality scoring.
 
 ```
 ┌─────────────────────────────────────────┐
-│         YOUR CONSTITUTION               │
-│    (Non-negotiable principles)          │
+│         CONSTITUTION                    │
+│    (Governance, Kill List, scoring)     │
 └─────────────────────────────────────────┘
                   ↓
 ┌─────────────────────────────────────────┐
-│     4-6 SPECIALIZED PERSONAS            │
-│  (Each checks the others' work)         │
+│     SPECIALIZED PERSONAS               │
+│  (One job each — explicit I/O)         │
 └─────────────────────────────────────────┘
                   ↓
 ┌─────────────────────────────────────────┐
-│       4-PHASE WORKFLOW                  │
-│  Plan → Create → Review → Finalize      │
+│       ADAPTIVE PHASES                   │
+│  r (gather) → K (produce) →            │
+│  Ω (evaluate) → α (learn)              │
 └─────────────────────────────────────────┘
                   ↓
 ┌─────────────────────────────────────────┐
-│      VERSIONED ARTIFACTS                │
-│   (Reviewable, trackable outputs)       │
+│      SCORED ARTIFACTS                   │
+│  (0-100 scores, named verdicts)         │
 └─────────────────────────────────────────┘
 ```
 
-**Current Domains:** [Software Development](./domains/software-development/) | [Content Writing](./domains/content-writing/)
-**Coming Soon:** Grant Writing
-
 ---
 
-## Quick Start
+## Create Your Workflow
 
-### 1. [Choose Your Domain](./domains/)
-- **Software Development** — Apps, APIs, tools
-- **Content Writing** — Blogs, marketing, docs
+### Prerequisites
 
-### 2. [5-Minute Quick Start](./QUICKSTART.md)
-Get up and running in 5 minutes
+- **With Claude Code:** [Install Claude Code](https://claude.ai/claude-code), then clone this repo and open it
+- **Without Claude Code:** Browse `examples/` and manually adapt the `scaffolding/` templates (see [Without Claude Code](#without-claude-code))
 
----
+### With Claude Code
 
-## What's Included
+```bash
+git clone https://github.com/Optiminz/ai-workflow-orchestrator.git
+cd ai-workflow-orchestrator
+# Open in Claude Code, then run:
+/new-workflow
+```
 
-- **2 Complete Domains** (software dev + content writing)
-- **10 Specialized Personas** (ready to use or customise)
-- **25+ Phase-Based Prompts** (planning, creation, review, finalisation)
-- **6 Constitution Templates** (by project type)
+Follow the guided 6-phase flow. The wizard asks about your domain, team structure, quality standards, and output format — then generates a complete workflow scaffold.
 
----
+### What You Get
 
-## Domains
-
-### Software Development
-Build production-ready software using AI with constitutional governance and specialised personas.
-
-- **5 Personas:** Product Owner → Architect → Developer → QA Engineer → Technical Writer
-- **16 Prompts** across 5 phases
-- **3 Constitution Templates:** Internal tool, Client app, AI agent
-
-**[Get Started →](./domains/software-development/)**
-
----
-
-### Content Writing
-Create high-quality content using AI with brand voice consistency and SEO optimisation.
-
-- **5 Personas:** Content Strategist → Writer → SEO Specialist → Fact Checker → Editor
-- **12 Prompts** across 4 phases
-- **3 Constitution Templates:** Blog, Marketing, Technical docs
-
-**[Get Started →](./domains/content-writing/)**
+```
+your-workflow/
+├── CLAUDE.md              # AI operating instructions
+├── CONSTITUTION.md        # Quality standards & governance
+├── personas/              # Single-responsibility AI roles
+├── prompts/               # Copy-paste prompts (works with any AI)
+├── .claude/agents/        # Claude Code agent files
+├── workflows/             # Full, Quick, Simple variants
+└── templates/             # Memory & artifact schemas
+```
 
 ---
 
 ## How It Works
 
-### 1. Constitution (Your Project's Principles)
-Define non-negotiable rules that govern all work:
-- **Software:** Tech stack, security standards, coding conventions
-- **Content:** Brand voice, SEO requirements, style guide
+Five concepts underpin every generated workflow. Each links to deeper reading.
 
-### 2. Specialized Personas (Expert Perspectives)
-Each domain has 4-6 personas that check and balance each other:
-- **Software:** Product Owner → Architect → Developer → QA → Technical Writer
-- **Content:** Strategist → Writer → SEO Specialist → Fact Checker → Editor
+**[Constitution](docs/concepts/what-is-constitutional-ai.md)**
+A single governance document containing the Kill List (automatic fail conditions), scoring dimensions, and evolution rules. Every persona checks work against it before passing output forward.
 
-### 3. 4-Phase Workflow (Quality Gates)
-Every project flows through structured phases:
-- **Phase 1:** Strategy/Planning
-- **Phase 2:** Creation/Implementation
-- **Phase 3:** Review/Refinement
-- **Phase 4:** Finalisation/Documentation
+**[Personas](docs/concepts/why-personas-not-prompts.md)**
+Single-responsibility AI roles. Each has one job, explicit inputs and outputs, and a defined set of constraints. They check each other's work rather than working in isolation.
 
-### 4. Versioned Artifacts (Transparent Iteration)
-Every phase produces reviewable files:
-- `artifacts/01-strategy-v1.md` → `v2` → `v3` (iteration history)
-- `artifacts/02-draft-v1.md` → cross-persona feedback → `v2`
-- `artifacts/workflow-log.md` (documents all decisions)
+**[Phases](docs/concepts/the-adaptive-cycle.md)**
+An adaptive cycle adapted from ecological systems theory: r (gather information) → K (produce output) → Ω (evaluate against constitution) → α (extract learnings). Applied differently per domain.
+
+**Memory**
+Three tiers: CONTEXT (volatile, current session only), MEMORY (persistent across sessions), PROJECT-LEARNINGS (cross-project patterns). Generated workflows include templates for all three.
+
+**Quality Scoring**
+Numeric scores (0–100) mapped to named verdicts: APPROVE / REVISE / RESTRUCTURE / RELEASE. Removes ambiguity from review cycles — every artifact gets a score, not just feedback.
 
 ---
 
-## Documentation
+## Examples
 
-- **[Quick Start Guide](./QUICKSTART.md)** — Get started in 5 minutes
-- **[Domain Selection](./domains/)** — Choose software, content, or (soon) grant writing
-- **[Guides](./docs/guides/)** — Working solo, teams, customisation
-- **[Architecture](./docs/architecture/)** — Design decisions and patterns
+### Software Development
+5 personas, 5 phases, 3 constitution templates (internal tool, client app, AI agent).
+→ [examples/software-development/](examples/software-development/)
+
+### Content Writing
+5 personas, 4 phases, 3 constitution templates (blog, marketing, technical docs).
+→ [examples/content-writing/](examples/content-writing/)
+
+### Production Example
+The [ai-dev-orchestrator](https://github.com/Optiminz/ai-dev-orchestrator) is a full software development workflow built with this framework — all personas, phases, and constitution in active use.
+
+---
+
+## Without Claude Code
+
+Generated workflows include a `prompts/` directory with copy-paste prompts that work with any AI tool (ChatGPT, Gemini, Claude.ai, etc.).
+
+If you want to build a workflow manually without the `/new-workflow` wizard:
+1. Browse `examples/` to find the closest match to your domain
+2. Copy the relevant `scaffolding/` templates
+3. Fill in the placeholders following the inline guidance
+
+---
+
+## Learn More
+
+- [What is Constitutional AI?](docs/concepts/what-is-constitutional-ai.md)
+- [Why Personas, Not Prompts?](docs/concepts/why-personas-not-prompts.md)
+- [The Adaptive Cycle](docs/concepts/the-adaptive-cycle.md)
+- [Quick Start Guide](QUICKSTART.md)
+- [Contributing](CONTRIBUTING.md)
 
 ---
 
 ## Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for:
-- How to propose new domains
-- Quality standards for submissions
-- Persona and prompt templates
-
----
+Contributions welcome — new domains, personas, and constitution templates. See [CONTRIBUTING.md](CONTRIBUTING.md) for standards and submission process.
 
 ## License
 
-MIT License — see [LICENSE](./LICENSE) for details
-
----
-
-## The Problem
-
-**Traditional AI workflow:**
-```
-You: "Build me a landing page"
-AI: [Generates 500 lines of code]
-You: [Overwhelmed, can't iterate methodically]
-Team member: Uses their own AI to modify further — everyone gets frustrated!
-```
-
-**Constitutional workflow:**
-```
-You: "Build me a landing page. Start with product requirements."
-Product Owner Persona → artifacts/01-prd.md (REVIEWABLE)
-
-You: "Good, but emphasise conversion more."
-Product Owner → artifacts/01-prd-v2.md (IMPROVED)
-
-You: "Approved. Now create the technical design."
-Architect Persona → artifacts/02-tech-spec.md (STRUCTURED)
-
-[Continue through phases...]
-
-Result: Transparent, methodical, version-controlled work
-```
-
----
-
-## Who Is This For?
-
-✅ **Solo practitioners** who want quality checks without a team
-✅ **Small teams (2-10 people)** who need specialised expertise without hiring
-✅ **Anyone frustrated** with inconsistent AI outputs
-
----
-
-## Why This Works
-
-| Approach | Traditional AI Prompting | Constitutional Workflow |
-|----------|-------------------------|------------------------|
-| **Process** | Ad-hoc, one-shot prompts | Structured 4-phase workflow |
-| **Quality Control** | You catch all issues | Multiple personas review each other |
-| **Iteration** | Re-prompt from scratch | Version-controlled artifacts (v1, v2, v3) |
-| **Governance** | Implicit rules in prompts | Explicit CONSTITUTION.md file |
-| **Transparency** | Chat history only | Reviewable artifact files |
-| **Specialization** | Generic AI | Specialised personas (strategist, creator, reviewer) |
-| **Accountability** | Hard to track decisions | Documented iteration history |
-| **Team Collaboration** | Copy-paste chaos | Shared constitution + artifacts |
-
-**Result:** Consistent quality, methodical iteration, transparent process
-
----
-
-## Why "Constitutional"?
-
-Traditional AI prompting is like asking one person to do everything with vague instructions. Constitutional workflows:
-- **Encode principles** in a CONSTITUTION.md file (non-negotiable rules)
-- **Separate concerns** with specialised personas (like separation of powers)
-- **Enforce checks and balances** through cross-persona reviews
-- **Document decisions** in versioned artifacts (transparent governance)
-
-The result: AI collaboration that's methodical, transparent, and consistently high-quality.
-
----
-
-**Ready to get started?** → [Choose your domain](./domains/) or [5-minute quick start](./QUICKSTART.md)
+MIT — see [LICENSE](LICENSE) for details.
