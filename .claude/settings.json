@@ -4,7 +4,8 @@
       "Bash(git checkout -b feat/workflow-wizard)",
       "Bash(git rm QUICK-START.md WORKFLOW-ARCHITECT.md README-ORIGINAL.md)",
       "Bash(git commit:*)",
-      "Bash(git add -A)"
+      "Bash(git add -A)",
+      "Bash(git rm .claude/agents/sw-*.md .claude/agents/cw-*.md)"
     ],
     "additionalDirectories": [
       "/Users/malcolm/Projects/ai-workflow-orchestrator/.claude/agents",
