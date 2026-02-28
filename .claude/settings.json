@@ -1,11 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git checkout -b feat/workflow-wizard)",
-      "Bash(git rm QUICK-START.md WORKFLOW-ARCHITECT.md README-ORIGINAL.md)",
-      "Bash(git commit:*)",
-      "Bash(git add -A)",
-      "Bash(git rm .claude/agents/sw-*.md .claude/agents/cw-*.md)"
+      "*",
+      "Bash(git add CHANGELOG.md scaffolding/agent-template.md scaffolding/claude-md-template.md scaffolding/constitution-template.md scaffolding/memory-templates/ scaffolding/persona-template.md scaffolding/project-learnings-template.md scaffolding/prompt-template.md scaffolding/workflow-templates/ scaffolding/agents/agent-template.yaml scaffolding/memory/constitution-template.md scaffolding/memory/context-template.md scaffolding/memory/memory-template.md scaffolding/memory/project-learnings-template.md scaffolding/workflows/workflow-template.yaml)",
+      "Bash(git commit:*)"
     ],
     "additionalDirectories": [
       "/Users/malcolm/Projects/ai-workflow-orchestrator/.claude/agents",
