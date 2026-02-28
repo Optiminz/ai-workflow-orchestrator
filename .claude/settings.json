@@ -1,7 +1,15 @@
 {
   "permissions": {
+    "allow": [
+      "Bash(git checkout -b feat/workflow-wizard)",
+      "Bash(git rm QUICK-START.md WORKFLOW-ARCHITECT.md README-ORIGINAL.md)",
+      "Bash(git commit:*)",
+      "Bash(git add -A)"
+    ],
     "additionalDirectories": [
-      "/Users/malcolm/Projects/ai-workflow-orchestrator/.claude/agents"
+      "/Users/malcolm/Projects/ai-workflow-orchestrator/.claude/agents",
+      "/Users/malcolm/Projects/ai-workflow-orchestrator/docs",
+      "/Users/malcolm/Projects/ai-workflow-orchestrator/.claude"
     ]
   }
 }
