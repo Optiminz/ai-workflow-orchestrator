@@ -39,7 +39,7 @@ Claude walks you through 6 phases:
 ### Step 4: Use your new workflow
 
 ```bash
-cd ~/Projects/ai-[your-domain]-workflow
+cd ~/optimi-projects/ai-[your-domain]-workflow
 # Your workflow is ready — start with Persona 1
 ```
 

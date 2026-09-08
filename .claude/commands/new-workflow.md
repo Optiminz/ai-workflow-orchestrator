@@ -33,7 +33,7 @@ Ask these questions in order:
 > What does "done" look like for one complete cycle? Describe the end state in concrete terms — a closed deal, a published article, a resolved support ticket, a hired candidate, a delivered report.
 
 **Question 5:**
-> Where should I create this workflow? Provide a directory path, or press Enter to use the default: `~/Projects/ai-[domain]-workflow/`
+> Where should I create this workflow? Provide a directory path, or press Enter to use the default: `~/optimi-projects/ai-[domain]-workflow/`
 
 After all five answers are collected, write a one-paragraph **Domain Summary** that captures:
 - The domain and its goal
