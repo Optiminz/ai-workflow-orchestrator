@@ -51,8 +51,3 @@ Study these before generating new workflows:
 3. Every persona gets single responsibility — one job, explicit I/O, clear constraints
 4. Use `/reflect` at end of sessions to capture learnings
 5. Update `CHANGELOG.md` when making notable changes — Keep a Changelog format, semver, date as `YYYY-MM-DD`
-
-## Project Learnings
-
-@.claude/learnings/learnings.md
-@.claude/learnings/decisions.md

@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.1] - 2026-09-15
+
+### Removed
+- `.claude/learnings/learnings.md` and `.claude/learnings/decisions.md` — both were empty templates (a header and an append marker, no content).
+- The `## Project Learnings` section of `.claude/CLAUDE.md`, which `@`-imported those two files. The imports never resolved: a CLAUDE.md `@`-import is relative to the importing file, so `@.claude/learnings/learnings.md` inside `.claude/CLAUDE.md` resolved to `.claude/.claude/learnings/learnings.md`. Claude Code fails this silently. Nothing was lost, because the files held no content. (Optiminz/occb-mcs#195)
+
+---
+
 ## [2.0.0] - 2026-02-28
 
 ### Added
